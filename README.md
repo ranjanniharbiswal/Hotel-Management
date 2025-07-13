@@ -17,11 +17,12 @@ A brief description of what this project does and who it's for.
 1. 📥 Clone the repo
 2. ▶️ Run `mvn spring-boot:run`
 3. 🌐 Visit `http://localhost:8080`
+
 ---
  📡 API Endpoints
 ---
 
-### 🔐 Authentication
+ 🔐 Authentication
 
 #### 1. 📝 Register a User
 - **URL**: `/api/auth/register`
