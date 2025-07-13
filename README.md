@@ -34,7 +34,7 @@ A brief description of what this project does and who it's for.
     "email": "example@gmail.com",
     "password": "yourpassword"
   }
-``
+  ```
   #### 2. 🔑 Log In
   - **URL**: `/api/auth/login`
 - **Method**: `POST`
