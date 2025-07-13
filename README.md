@@ -33,7 +33,7 @@ A brief description of what this project does and who it's for.
     "password": "yourpassword"
   }
 ``
-  #### 2. LogIn
+  #### 2. 🔑 Log In
   - **URL**: `/api/auth/login`
 - **Method**: `POST`
 - **Request Body**:
@@ -43,14 +43,15 @@ A brief description of what this project does and who it's for.
     "password": "yourpassword"
   }
   ```
-  #### 3. Get All Users
+  #### 3. 👥 Get All Users 
 - **URL**: `/api/auth/users`
 - **Method**: `GET`
-  #### 4. Get All Bookings
+### 🏨 Room & Booking Management
+  #### 4. 📃 Get All Bookings
 - **URL**: `/api/bookings`
 - **Method**: `GET`
 - Authorization: Bearer `<JWT_TOKEN>`
-  #### 5. Book A Room
+  #### 5. 🛎️ Book A Room
 - **URL**: `/api/bookings/book`
 - **Method**: `POST`
 - Authorization: Bearer `<JWT_TOKEN>`
@@ -62,19 +63,19 @@ A brief description of what this project does and who it's for.
     "date": "2025-07-12"
     }
   ```
- #### 6. Get All Rooms
+ #### 6. 🏘️ Get All Rooms
 - URL: `/api/rooms`
 - Method: `GET`
 - Authorization: Bearer `<JWT_TOKEN>`
- #### 7. Get All Available Rooms
+ #### 7. 🟢 Get All Available Rooms
 - URL: `/api/rooms/available-rooms`
 - Method: `GET`
 - Authorization: Bearer <JWT_TOKEN>
- #### 8. Get Room by ID
+ #### 8. 🔍 Get Room by ID
 - URL: `/api/rooms/{id}`
 - Method: `GET`
 - Authorization: Bearer `<JWT_TOKEN>`
-#### 9. Add A Room
+#### 9. ➕ Add A Room  
 - **URL**: `/api/rooms/add-room`
 - **Method**: `POST`
 - Authorization: Bearer `<JWT_TOKEN>`
@@ -88,9 +89,9 @@ A brief description of what this project does and who it's for.
   ```
 
 
-  
+  ---
 
-This is a Spring Boot backend application for managing user registration, login, room management, and bookings.
+📦This is a Spring Boot backend application for managing user registration, login, room management, and bookings.
 
-## Author
-Nihar Ranjan Biswal
+## 👨‍💻Author
+Nihar Ranjan Biswal👨‍💻
