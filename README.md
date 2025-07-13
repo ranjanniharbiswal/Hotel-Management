@@ -49,11 +49,35 @@ A brief description of what this project does and who it's for.
   #### 4. Get All Bookings
 - **URL**: `/api/bookings`
 - **Method**: `GET`
-- Authorization: Bearer <JWT_TOKEN>
+- Authorization: Bearer `<JWT_TOKEN>`
   #### 5. Book A Room
 - **URL**: `/api/bookings/book`
 - **Method**: `POST`
+- Authorization: Bearer `<JWT_TOKEN>`
+- **Request Body**:
+  ```json
+  {
+    "userId":12,
+    "roomId": 10,
+    "date": "2024-12-25"
+    }
+  ```
+ #### 6. Get All Rooms
+- URL: `/api/rooms`
+- Method: `GET`
+- Authorization: Bearer `<JWT_TOKEN>`
+ #### 7. Get All Available Rooms
+- URL: `/api/rooms/available-rooms`
+- Method: `GET`
 - Authorization: Bearer <JWT_TOKEN>
+ #### 8. Get Room by ID
+- URL: `/api/rooms/{id}`
+- Method: `GET`
+- Authorization: Bearer `<JWT_TOKEN>`
+#### 9. Book A Room
+- **URL**: `/api/rooms/add-room`
+- **Method**: `POST`
+- Authorization: Bearer `<JWT_TOKEN>`
 - **Request Body**:
   ```json
   {
@@ -62,6 +86,8 @@ A brief description of what this project does and who it's for.
   "price": 5000,
   }
   ```
+
+
   
 
 This is a Spring Boot backend application for managing user registration, login, room management, and bookings.
