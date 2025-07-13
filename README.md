@@ -59,7 +59,7 @@ A brief description of what this project does and who it's for.
   {
     "userId":12,
     "roomId": 10,
-    "date": "2024-12-25"
+    "date": "2025-07-12"
     }
   ```
  #### 6. Get All Rooms
@@ -74,7 +74,7 @@ A brief description of what this project does and who it's for.
 - URL: `/api/rooms/{id}`
 - Method: `GET`
 - Authorization: Bearer `<JWT_TOKEN>`
-#### 9. Book A Room
+#### 9. Add A Room
 - **URL**: `/api/rooms/add-room`
 - **Method**: `POST`
 - Authorization: Bearer `<JWT_TOKEN>`
