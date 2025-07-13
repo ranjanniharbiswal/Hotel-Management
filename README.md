@@ -1,28 +1,28 @@
-# Hotel Management Backend
+# 🏨 Hotel Management Backend
 
 A brief description of what this project does and who it's for.
 
-## Features
-- Room Booking
-- JWT Authentication
-- User Login/Register
+## ✨ Features
+- 🛏️ Room Booking
+- 🔐 JWT Authentication
+- 👤 User Login/Register
 
-## Technologies Used
-- Java 17
-- Spring Boot
-- MySQL
-- JWT
+## 🛠️ Technologies Used
+- ☕ Java 17
+- 🌱 Spring Boot
+- 🐬 MySQL
+- 🔑 JWT
 
-## Setup Instructions
-1. Clone the repo
-2. Run `mvn spring-boot:run`
-3. Visit `http://localhost:8080`
+## ⚙️ Setup Instructions
+1. 📥 Clone the repo
+2. ▶️ Run `mvn spring-boot:run`
+3. 🌐 Visit `http://localhost:8080`
 
 ## 📡 API Endpoints
 
 ### 🔐 Authentication
 
-#### 1. Register a User
+#### 1. 📝 Register a User
 - **URL**: `/api/auth/register`
 - **Method**: `POST`
 - **Request Body**:
@@ -32,7 +32,7 @@ A brief description of what this project does and who it's for.
     "email": "example@gmail.com",
     "password": "yourpassword"
   }
-  ```
+``
   #### 2. LogIn
   - **URL**: `/api/auth/login`
 - **Method**: `POST`
