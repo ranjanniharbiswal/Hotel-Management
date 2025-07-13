@@ -74,7 +74,7 @@ A brief description of what this project does and who it's for.
  #### 7. 🟢 Get All Available Rooms
 - URL: `/api/rooms/available-rooms`
 - Method: `GET`
-- Authorization: Bearer <JWT_TOKEN>
+- Authorization: Bearer `<JWT_TOKEN>`
  #### 8. 🔍 Get Room by ID
 - URL: `/api/rooms/{id}`
 - Method: `GET`
