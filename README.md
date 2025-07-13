@@ -19,10 +19,10 @@ A brief description of what this project does and who it's for.
 3. 🌐 Visit `http://localhost:8080`
 
 ---
- 📡 API Endpoints
+ ### 📡 API Endpoints
 ---
 
- 🔐 Authentication
+ ### 🔐 Authentication
 
 #### 1. 📝 Register a User
 - **URL**: `/api/auth/register`
