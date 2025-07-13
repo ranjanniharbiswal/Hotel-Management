@@ -11,6 +11,7 @@ import com.dev.backend.entity.Booking;
 import com.dev.backend.entity.Room;
 import com.dev.backend.repository.BookingRepository;
 import com.dev.backend.repository.RoomRepository;
+import com.dev.backend.repository.UserRepository;
 
 @Service
 public class BookingService {
@@ -19,32 +20,32 @@ public class BookingService {
     private BookingRepository bookingRepository;
 
     @Autowired
+    private UserRepository userRepository;
+
+    @Autowired
     private RoomRepository roomRepository;
 
     @Transactional
     public Booking bookRoom(BookingDto bookingDto) {
+
+        // Check if the user exists
+        boolean userExists = userRepository.existsById(bookingDto.getUserId());
+        if (!userExists) {
+            throw new RuntimeException("User not found !!");
+        }
         // Check if room exists
         Room room = roomRepository.findById(bookingDto.getRoomId())
-                .orElseThrow(() -> new RuntimeException("Room not found"));
+                .orElseThrow(() -> new RuntimeException("Room not found !!"));
 
         // Check if room is available
         if (!room.isAvailable()) {
-            throw new RuntimeException("Room is not available");
+            throw new RuntimeException("Room is not available !!");
         }
 
-        // Check if room is already booked for the date
-        if (bookingRepository.existsByRoomIdAndDate(bookingDto.getRoomId(), bookingDto.getDate())) {
-            throw new RuntimeException("Room is already booked for this date");
-        }
-
-        // Create booking
+        // Book Room
         Booking booking = new Booking(bookingDto.getUserId(), bookingDto.getRoomId(), bookingDto.getDate());
-
-        // Mark room as unavailable (simplified - in real app, you might want different
-        // logic)
         room.setAvailable(false);
         roomRepository.save(room);
-
         return bookingRepository.save(booking);
     }
 

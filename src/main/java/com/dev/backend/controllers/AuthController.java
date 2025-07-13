@@ -1,6 +1,9 @@
 package com.dev.backend.controllers;
 
 import jakarta.validation.Valid;
+
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -49,4 +52,11 @@ public class AuthController {
                     .body(new LoginResponse(null, "Unexpected error during login: " + e.getMessage(), null));
         }
     }
+
+    @GetMapping("/users")
+    public ResponseEntity<List<User>> getAllUsers() {
+        List<User> users = userService.getAllUsers();
+        return ResponseEntity.ok(users);
+    }
+
 }

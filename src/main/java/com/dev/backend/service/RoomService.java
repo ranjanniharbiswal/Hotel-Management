@@ -16,23 +16,22 @@ public class RoomService {
     @Autowired
     private RoomRepository roomRepository;
     
+    //Get the details of all rooms
     public List<Room> getAllRooms() {
         return roomRepository.findAll();
     }
     
+    //Get all available rooms
     public List<Room> getAvailableRooms() {
         return roomRepository.findByAvailable(true);
     }
     
+    //Get specific room details by room_id
     public Optional<Room> getRoomById(Long id) {
         return roomRepository.findById(id);
     }
     
     public Room saveRoom(Room room) {
         return roomRepository.save(room);
-    }
-
-    public Room addRoom(Room room) {
-        return saveRoom(room);
     }
 }

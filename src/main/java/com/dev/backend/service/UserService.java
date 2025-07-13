@@ -1,5 +1,7 @@
 package com.dev.backend.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -24,9 +26,9 @@ public class UserService {
     private JwtUtil jwtUtil;
 
     public User registerUser(UserRegistrationDto registrationDto) {
-        // Check user if exists
+        // Check user or not
         if (userRepository.existsByEmail(registrationDto.getEmail())) {
-            throw new RuntimeException("User with this email already exists");
+            throw new RuntimeException("User with this email already exists !!");
         }
 
         // Create new user
@@ -49,4 +51,9 @@ public class UserService {
         String token = jwtUtil.generateToken(user.getEmail());
         return new LoginResponse(token, "Login successful !!", user.getId());
     }
+
+    public List<User> getAllUsers() {
+        return userRepository.findAll();
+    }
+
 }
