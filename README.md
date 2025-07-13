@@ -94,4 +94,5 @@ A brief description of what this project does and who it's for.
 📦This is a Spring Boot backend application for managing user registration, login, room management, and bookings.
 
 ## 👨‍💻 Author
-**Nihar Ranjan Biswal** 👨‍💻
+**Nihar Ranjan Biswal** 
+👨‍💻
