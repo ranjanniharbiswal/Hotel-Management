@@ -19,6 +19,7 @@ A brief description of what this project does and who it's for.
 3. 🌐 Visit `http://localhost:8080`
 
 ## 📡 API Endpoints
+---
 
 ### 🔐 Authentication
 
@@ -48,6 +49,7 @@ A brief description of what this project does and who it's for.
 - **Method**: `GET`
 ---
 ### 🏨 Room & Booking Management
+---
   #### 4. 📃 Get All Bookings
 - **URL**: `/api/bookings`
 - **Method**: `GET`
