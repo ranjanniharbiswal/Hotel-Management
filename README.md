@@ -46,6 +46,7 @@ A brief description of what this project does and who it's for.
   #### 3. 👥 Get All Users 
 - **URL**: `/api/auth/users`
 - **Method**: `GET`
+---
 ### 🏨 Room & Booking Management
   #### 4. 📃 Get All Bookings
 - **URL**: `/api/bookings`
